@@ -1,0 +1,90 @@
+{% extends 'navbars/navbar_base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include "navbars/navbar_Writer.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Writer.html" %}
+{% endblock %}
+
+{% block content %}
+    <h1>status of my books</h1>
+    <style>
+        .listBook {
+            position: relative;
+            font-family: Aro;
+            box-shadow: 0 0 4px 1px rgb(24 23 23) !important;
+            background-color: white;
+            margin: 4% 4%;
+            color: #1B273B;
+            padding: 0 2%;
+            height: 250px;
+        }
+
+        .listBook p {
+            font-size: 18px;
+            margin-bottom: 3%;
+        }
+
+        .listBook h2 {
+            margin-bottom: 5%;
+        }
+
+        .listBook img {
+            color: white;
+            float: right;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .listBook .img1 {
+            color: white;
+            float: right;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            position: absolute;
+            right: 0px;
+            bottom: 28px;
+        }
+
+        .listBook a {
+            color: #1B273B;
+            float: right;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            position: absolute;
+            margin-top: 2%;
+            right: 18px;
+            bottom: 0px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+
+    {% for element in writer %}
+        {% for element2 in element.books.all %}
+            <div typeof="Book" class="col-lg-5 col-md-5 col-sm-5 listBook">
+                <h2 property="name" > {{ element2 }} </h2>
+                <p property="dateCreated"> Date uploaded: {{ element2.date | date:"d/m/Y" }}</p>
+                <p property="author"> Author: {{ element.name }}</p>
+                <p property="genre"> Gender: {{ element2.genere }}</p>
+                {% if element2.state == 2 %}
+                    <img property="image" class="img1" src="../../static/img/Estados/{{ element2.state }}.png">
+                    <a href="{% url 'reject_book' element2.id %}">Ver motivo</a>
+                {% else %}
+                    <img property="image" class="img1" src="../../static/img/Estados/{{ element2.state }}.png">
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    </div>
+
+    <input style="display: none" type="submit" id="valmenu" value="myBooks"/>
+
+{% endblock %}
+{% block popUp %}
+{% endblock %}

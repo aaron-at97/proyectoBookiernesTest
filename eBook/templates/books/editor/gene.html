@@ -1,0 +1,12 @@
+{% extends 'navbars/navbar_base.html' %}
+{% block navbar %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "books/editor/libros_publicados.html" %}
+{% endblock %}

@@ -1,0 +1,111 @@
+.ventana {
+    background-color: white;
+    color: #1B273B;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.ventana h1 {
+    font-family: "Aro"
+}
+
+.contenido-ventana {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 100rem;
+    border-radius: 0.5rem;
+    padding: 2%;
+}
+
+.boton-cerrar {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.boton-cerrar:hover {
+    background-color: darkgray;
+}
+
+.btn-default-bookiernes {
+    color: #1B273B !important;
+    box-shadow: 0 0 0 2px #1B273B inset;
+    background-color: transparent;
+    margin-bottom: 70px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 18px 48px 16px;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.btn-default-bookiernes:hover, .btn-default-bookiernes:focus {
+    color: white !important;
+    background-color: #1B273B;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+.btn-default-bookview-green:hover, .btn-default-bookview-green:focus {
+    color: white !important;
+    background-color: #3c763d;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+
+.btn-default-bookview-green {
+    color: #3c763d !important;
+    box-shadow: 0 0 0 2px #3c763d inset;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 18px 48px 16px;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+.ventana label {
+    margin-top: 2%;
+}
+.selectPop {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.3;
+    padding: .4em 1.4em .3em .8em;
+    width: 400px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgb(0 0 0 / 3%);
+    border-radius: .3em;
+}

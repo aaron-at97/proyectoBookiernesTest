@@ -1,0 +1,81 @@
+{% extends 'navbars/navbar_base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include "navbars/navbar_Client.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Client.html" %}
+{% endblock %}
+
+{% block content %}
+    <!-- cuerpo -->
+    <link rel="stylesheet" href="{% static 'css/biblioteca.css' %}"/>
+    <h1> Published books </h1>
+    {% for element in writer %}
+        {% for element2 in element.books.all %}
+            {% if element2.state == 11 %}
+            <li typeof="Book" class='col-xs-12 col-sm-6 col-md-3 col-lg-2 js-album-results-1 borde'>
+                <figure>
+                    <div class='box'>
+                        <div class='content'>
+                            <img property="image" class='img-responsive'
+                                 src='{% static '/img/Libros/' %}{{ element2 }}/0.jpg'>
+                        </div>
+                    </div>
+
+                    <div class='content-overlay'></div>
+                    <div class='content-details'>
+                        <form action='#' method='post'>
+                            <figcaption class='album-play-button'>
+                                <h2 property="name" class='text-white'><input type='hidden' name='libro'
+                                                              value='{{ element2 }}'>{{ element2 }}
+                                </h2></input>
+                                <h4 property="author" class='text-white'><input type='hidden' name='autor'
+                                                              value='{{ element.name }}'>{{ element.name }}
+                                </h4></input>
+                                <div id='segmented-play-now' class='btn btn-link'>
+                                    <a href="{% url 'leer_libro' element2 '1' %}" class='azul-claro'
+                                       value='LEER YA'>
+                                        LEER YA</a>
+                                </div>
+                            </figcaption>
+                        </form>
+
+                    </div>
+                </figure>
+            </li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+
+    <input style="display: none" type="submit" id="valmenu" value="book2"/>
+
+{% endblock %}
+{% block search %}
+    <style>
+        .navbar li {
+            float: left;
+            width: auto;
+        }
+
+
+        .form-group {
+            width: 70%;
+            float: left;
+        }
+    </style>
+
+    <nav class="navbar negro-bg menu2" style="width: auto; position: fixed; background-color: #161719 !important;">
+        <div class="container-fluid">
+            <div class="buscadorcle navbar-form navbar-left" style="margin: 15px;">
+                <div class="form-group" style="padding-left: 20px;">
+                    <input type="text" class="form-control" name="buscador" id="buscardor" value=""
+                           placeholder="Titulo">
+                </div>
+                <button id="botonB" class="btn btn-default">Buscar</button>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+{% endblock %}

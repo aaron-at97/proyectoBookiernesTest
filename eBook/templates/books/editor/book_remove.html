@@ -1,0 +1,55 @@
+{% extends 'navbars/navbar_base.html' %}
+{% block navbar %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+{% block content %}
+    <h1> Books to remove </h1>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td style="font-weight: bold">Download book</td>
+            <td style="font-weight: bold"> Title book</td>
+            <td style="font-weight: bold"> Author name </td>
+            <td style="font-weight: bold">Gender</td>
+            <td style="font-weight: bold"> Date uploaded </td>
+            <td style="font-weight: bold"> State </td>
+            <td style="font-weight: bold">Delete</td>
+        </tr>
+        {% for element in writer %}
+            {% for element2 in element.books.all %}
+                <tr>
+                        <td>
+                            <button class="btn btn-primary fa fa-download" name="aceptar" id="nameForm"> Download </button>
+                        </td>
+                        <td>{{ element2 }}</td>
+                        <td>{{ element.name }}</td>
+                        <td>{{ element2.genere }}</td>
+                        <td>{{ element2.date | date:"d/m/Y" }}</td>
+                        {% if element2.state == 0 %}
+                            <td> <p style="color: yellow"> To be accepted </p> </td>
+                        {% elif element2.state == 1 %}
+                            <td><p style="color: green">Acepted</p></td>
+                        {% elif element2.state == 2 %}
+                            <td><p style="color: red">Rejected</p></td>
+                        {% elif element2.state == 11 %}
+                            <td><p style="color: green">Post</p></td>
+                        {% endif %}
+                        <td>
+                            <form role="form" action="{% url 'book_removeSave' element2.id %}" method="POST" style="display: inline-block;">
+                                {% csrf_token %}
+                                <button class="btn btn-primary btn-danger fa fa-trash" name="aceptar" type="submit" value=""> </button>
+                            </form>
+                        </td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+        </tbody>
+    </table>
+    <input style="display: none" type="submit" id="valmenu" value="bookremove"/>
+{% endblock %}
+{% block popUp %}
+{% endblock %}

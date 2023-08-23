@@ -1,0 +1,46 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+
+<div align="center">
+
+    <div sp-header="" class="ng-scope">
+
+      <div class="head ">
+
+        <a class="bookView-logo" ng-href="/es-ES" tabindex="-1" title="bookView"  href="" value="bookView"></a>
+
+      </div>
+
+    </div>
+
+
+    <form action="{% url 'login' %}" method="post">{% csrf_token %}
+        <div class="row">
+            <div class="col-xs-12">
+                {{ form.username }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                {{ form.password }}
+            </div>
+        </div>
+
+          <div class="row row-submit">
+            <input class="btn btn-stroked-dark" type="submit" style="margin-bottom: 20px;" value="login">
+          </div>
+          <a class="btn btn-stroked-dark" href="{% url 'home' %}"> Return </a>
+    </form>
+
+    <br />
+
+
+</div>

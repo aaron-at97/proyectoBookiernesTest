@@ -1,0 +1,191 @@
+
+.context_landing {
+	background-color: black !important;
+	background-color: rgba(0,0,0,0.5);
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.login, .login * {
+    box-sizing: border-box;
+    color: #fff;
+    font-family: proxima_nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1em;
+    outline: 0 none;
+    text-decoration: none;
+    text-rendering: optimizelegibility;
+}
+.context_landing::before {
+    display: block;
+    height: 100%;
+    opacity: .6;
+   	position: absolute;
+    width: 100%;
+    -webkit-filter: blur(15px) brightness(.5);
+    content: "";
+    z-index: -1;
+}
+
+.context_landing .main-login-class {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 870px;
+}
+.login, .login * {
+    box-sizing: border-box;
+    color: #fff;
+    font-family: proxima_nova,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1em;
+    outline: 0 none;
+    text-decoration: none;
+    text-rendering: optimizelegibility;
+}
+
+.context_landing .col-left {
+    width: 40%;
+}
+.context_landing .col {
+    float: left;
+    padding: 0 20px;
+}
+
+.context_landing .cols-wrap {
+   margin: 30px -20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.context_landing .primary-title {
+    color: #fff;
+}
+.context_landing .primary-title, .context_landing .secondary-title {
+    font-size: 24px;
+    font-weight: 100;
+    font-weight: light;
+    line-height: normal;
+}
+.context_landing .secondary-title {
+    color: #88898c;
+}
+.context_landing .primary-title, .context_landing .secondary-title {
+    font-size: 24px;
+    margin: 8% 0;
+    font-weight: 100;
+    font-weight: light;
+    line-height: normal;
+}
+.context_landing .col-right {
+    width: 60%;
+}
+.context_landing .col {
+    float: left;
+    padding: 0 20px;
+}
+.context_landing #login-pane {
+    padding: 20px;
+}
+.show {
+    display: block !important;
+}
+
+.separator-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.separator-line {
+    width: 25px;
+    height: 1px;
+    background-color: hsla(0,0%,100%,.6);
+    margin: 20px 0;
+}
+
+.separator-text {
+    color: hsla(0,0%,100%,.6) !important;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin: 0 6px;
+    line-height: 22px !important;
+}
+
+.step-inner .btn-landing {
+    margin: 20px auto !important;
+}
+.btn-landing {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    width: 100% !important;
+    height: 56px !important;
+    border-radius: 500px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    margin: 0 !important;
+}
+.context_landing h1 {
+    border-bottom: 1px solid #88898c;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 100;
+    font-weight: light;
+    margin: 30px auto;
+    padding-bottom: 5px;
+}
+.context_landing .landing-logo {
+    display: block;
+    height: 40px;
+    margin: 30px 0;
+    width: 134px;
+}
+
+.btn-white {
+    color: #000 !important;
+    background-color: #fff !important;
+    cursor: pointer;
+}
+.btn-white:hover{
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+.btn-azul {
+    color: #fff;
+    background-color: #337ab7;
+    cursor: pointer;
+}
+
+.btn-azul:hover, .btn-azul:focus{
+color: white;
+background-color: #13aac5;
+}

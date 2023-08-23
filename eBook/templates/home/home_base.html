@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+
+    {% include "home/header.html" %}
+
+</head>
+
+<body>
+<span vocab="https://schema.org/">
+<div>
+    {% block navbar %}{% include "home/navbar.html" %}{% endblock %}
+</div>
+
+
+<div id="content">
+    {% block contents %}{% include "home/cuerpo.html" %}{% endblock %}
+</div>
+</span>
+</body>
+</html>

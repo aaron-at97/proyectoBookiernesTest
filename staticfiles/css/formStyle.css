@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS header */
+
+body, .header-formulario-registro-logo {
+	 color:#fff;
+	 background-color:#1B273B;
+}
+
+.header-formulario-registro-logo{
+	display: block;
+	border-bottom: 1px solid #dfe0e6;
+}
+
+.header-formulario-registro-logo .container .astec-logo img.logo-registro{
+	width: 30%;
+    height: 30%;
+    margin: 0 auto;
+}
+.header-formulario-registro-logo .container{
+	text-align: center;
+}
+
+/* CSS body*/
+
+.formulario-registro{
+	display: block;
+}
+
+.formulario-registro .container{
+	text-align: center;
+}
+
+.formulario-registro .container .contenido-formulario{
+	margin: 0 auto;
+	max-width: 26.875em;
+}
+
+.formulario-registro .container .contenido-formulario h2{
+	font-size: 17px;
+	margin-bottom: 1em;
+	margin-top: 2em;
+	color: #1c1c1f;
+	font-weight: 900;
+    line-height: 1.2;
+}
+
+.formulario-registro .container .contenido-formulario form li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.formulario-registro .container .contenido-formulario form li {
+	text-align: left;
+	margin-bottom: .625em;
+}
+.formulario-registro .container .contenido-formulario form li input {
+	padding: .4em 1.4em .3em .8em;
+    width: 100%;
+    border: 1px solid #dfe0e6;
+    font-size: 16px;
+}
+.formulario-registro .container .contenido-formulario form li label.checkbox {
+	color: #88898c;
+    display: block;
+    font-size: .75em;
+    margin-bottom: 1.5rem;
+}
+
+.formulario-registro .container .contenido-formulario form li label input {
+	float: left;
+    margin-top: 3px;
+    background: 0 0;
+    border: none;
+    padding: 0;
+    width: 4%;
+    margin-right: 10px;
+}
+
+.btn-stroked-dark {
+    color: #fff !important;
+    box-shadow: 0 0 0 2px #fff inset;
+    background-color: transparent;
+    margin-bottom: 70px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 18px 48px 16px;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: bold;
+}
+
+.btn-stroked-dark:hover, .btn-stroked-dark:focus {
+color: white !important;
+background-color: #337ab7;
+box-shadow: 0 0 0 2px #fff inset;
+}
+.error{
+    color: red;
+    padding-top: 16px;
+}
+#volver{
+    margin-top: -60px;
+}
+#formulari input, textarea, select, option {
+    color: black;
+}
+#formulari input, textarea, select, option {
+    color: black;
+}
+.formulario-registro .container .contenido-formulario form li textarea {
+ 	padding: .4em 1.4em .3em .8em;
+    width: 100%;
+    border: 1px solid #dfe0e6;
+    font-size: 16px;
+}
+.select-css {
+	display: block;
+	font-size: 16px;
+	font-family: 'Verdana', sans-serif;
+	font-weight: 400;
+	color: #444;
+	line-height: 1.3;
+	padding: .4em 1.4em .3em .8em;
+	width: 400px;
+	max-width: 100%;
+	box-sizing: border-box;
+ 	margin: 20px auto;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
+	border-radius: .3em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}

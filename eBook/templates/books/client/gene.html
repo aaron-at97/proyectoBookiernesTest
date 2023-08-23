@@ -1,0 +1,55 @@
+{% load static %}
+<!-- cuerpo -->
+<link rel="stylesheet" href="{% static 'css/cuerpo.css' %}"/>
+    <!-- Libros mas leidos inicio -->
+    <div class="container">
+        <div class="row center">
+            <h2 class="h1">Looking for new books?</h2>
+            <p class="lead">Enter our library to discover new books.</p>
+            <a href="{% url 'biblioteca' %}" id="segmented-desktop-launch" class="btn btn-stroked-dark" role="button">open the library</a>
+        </div>
+        <div class="row">
+            <div class="album-results container">
+                <ul>
+                    {% for element in book %}
+                        {% for element2 in element.books.all %}
+                            {% if element2.state == 11 %}
+                                <li typeof="Book" class='col-xs-12 col-sm-3 js-album-results-1'>
+                                <figure>
+                                    <div class='box'>
+                                        <div class='content'>
+                                            <img property="image" class='img-responsive'
+                                                 src='{% static '/img/Libros/' %}{{ element2 }}/0.jpg'>
+                                        </div>
+                                    </div>
+
+                                    <div class='content-overlay'></div>
+                                    <div class='content-details'>
+                                        <form action='#' method='post'>
+                                            <figcaption class='album-play-button'>
+                                                <h2 property="name" class='text-white'><input type='hidden' name='libro'
+                                                                              value='{{ element2 }}'>{{ element2 }}
+                                                </h2></input>
+                                                <h4 property="author" class='text-white'><input type='hidden' name='autor'
+                                                                              value='{{ element.name }}'>{{ element.name }}
+                                                </h4></input>
+                                                <div id='segmented-play-now' class='btn btn-link'>
+                                                    <a href="{% url 'leer_libro' element2 '1'  %}" class='azul-claro'
+                                                       value='LEER YA'>
+                                                        LEER YA</a>
+                                                </div>
+                                            </figcaption>
+                                        </form>
+
+                                    </div>
+                                </figure>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <input style="display: none" type="submit" id="valmenu" value="book1"/>

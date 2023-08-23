@@ -1,0 +1,497 @@
+
+.sidebar .user-icon-container {
+    width: 64px;
+    height: 64px;
+    margin: 30px auto;
+    background: #161719;
+    overflow: hidden;
+}
+.nav-inverse.nav-stacked > li.active > a, .nav-inverse.nav-stacked > li.active > a:active, .nav-inverse.nav-stacked > li.active > a:focus, .nav-inverse.nav-stacked > li.active > a:hover {
+    color: #f8f8f8 !important;
+}
+.img-circle {
+    border-radius: 50%;
+}
+
+.sidebar .user-icon {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    fill: #222326;
+    position: relative;
+    top: 4px;
+}
+
+.sidebar .user-icon {
+    fill: #222326;
+}
+
+.nav-tabs > li {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 0;
+}
+.nav-stacked > li {
+    float: none;
+}
+
+.nav-tabs.nav-stacked {
+    font-size: 16px;
+}
+
+.flexbox:not(.flexboxtweener) .container-content > .row > [class^="col"] {
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: flex;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.btn-group-vertical > .btn-group-inverse::after, .btn-group-vertical > .btn-group-inverse::before, .btn-group-vertical > .btn-group::after, .btn-group-vertical > .btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav-inverse::after, .nav-inverse::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before {
+    content: " ";
+    display: table;
+}
+
+::after, ::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nav-tabs.nav-stacked {
+    margin: 0 -15px;
+}
+.nav-inverse.nav-stacked {
+    border-bottom-color: rgba(255,255,255,.05);
+    border-top-color: rgba(0,0,0,.2);
+}
+.nav-inverse.nav-tabs, .nav-inverse.nav-tabs.nav-justified {
+    border-bottom-color: rgba(255,255,255,.05);
+}
+.nav-tabs.nav-stacked {
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0,0,0,.025);
+        border-bottom-color: rgba(0, 0, 0, 0.024);
+    border-top: 1px solid rgba(0,0,0,.005);
+        border-top-color: rgba(0, 0, 0, 0.004);
+}
+.nav-tabs, .nav-tabs.nav-justified {
+    border-bottom: 2px solid rgba(0,0,0,.025);
+}
+.nav-tabs {
+    font-size: 14px;
+}
+.nav-tabs {
+    border-bottom: 1px solid transparent;
+}
+.nav, .nav-inverse {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.nav-tabs.nav-stacked > li {
+    border-bottom: 1px solid rgba(0,0,0,.005);
+        border-bottom-color: rgba(0, 0, 0, 0.004);
+    border-top: 1px solid rgba(0,0,0,.025);
+        border-top-color: rgba(0, 0, 0, 0.024);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.nav-tabs > li {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 0;
+}
+.nav-stacked > li {
+    float: none;
+}
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.nav-inverse > li, .nav > li {
+    position: relative;
+    display: block;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nav-tabs.nav-stacked > li::before {
+    background-color: transparent;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 5px;
+}
+::after, ::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.nav-tabs.nav-stacked {
+    font-size: 16px;
+}
+.nav-tabs {
+    font-size: 14px;
+}
+.nav, .nav-inverse {
+    list-style: none;
+}
+
+.nav-tabs.nav-stacked > li > a {
+    position: relative;
+    padding-left: 75px;
+}
+.nav-tabs.nav-stacked > li > a {
+    fill: #c1c3c6;
+    padding: 15px 15px 15px 30px;
+        padding-left: 30px;
+}
+
+.nav-pills > li > a, .nav-tabs > li > a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav-tabs > li > a {
+    border: none;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 0;
+}
+.nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a:active, .nav-tabs.nav-justified > li > a:focus, .nav-tabs.nav-justified > li > a:hover, .nav-tabs > li > a, .nav-tabs > li > a:active, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
+    border: none;
+}
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.nav-inverse > li > a, .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.nav-inverse a {
+    color: #919496;
+}
+
+a {
+    color: #13aac5;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.nav-tabs.nav-stacked > li > a {
+    fill: #c1c3c6;
+}
+
+.nav-tabs.nav-stacked > li > a {
+    letter-spacing: 0;
+    text-transform: none;
+}
+.nav-pills > li > a, .nav-tabs > li > a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav-tabs > li > a {
+    line-height: 1.5;
+}
+.nav-inverse a {
+    color: #919496;
+}
+
+a {
+    color: #13aac5;
+}
+.nav-tabs.nav-stacked {
+    font-size: 16px;
+}
+
+.nav-tabs.nav-stacked > li.active::before, .nav-tabs.nav-stacked > li:hover::before {
+    background-color: #13aac5;
+}
+.nav-tabs.nav-stacked > li::before {
+    background-color: transparent;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 5px;
+}
+
+.negro-bg {
+background-color:  #161719;
+}
+
+.nav-inverse.nav-stacked > li.active > a, .nav-inverse.nav-stacked > li.active > a:active, .nav-inverse.nav-stacked > li.active > a:focus, .nav-inverse.nav-stacked > li.active > a:hover {
+    color: #f8f8f8;
+}
+.nav-inverse.nav-tabs.nav-justified > li.active > a, .nav-inverse.nav-tabs.nav-justified > li.active > a:active, .nav-inverse.nav-tabs.nav-justified > li.active > a:focus, .nav-inverse.nav-tabs.nav-justified > li.active > a:hover, .nav-inverse.nav-tabs > li.active > a, .nav-inverse.nav-tabs > li.active > a:active, .nav-inverse.nav-tabs > li.active > a:focus, .nav-inverse.nav-tabs > li.active > a:hover {
+    color: #f8f8f8;
+}
+.nav-tabs.nav-stacked > li.active > a, .nav-tabs.nav-stacked > li.active > a:active, .nav-tabs.nav-stacked > li.active > a:focus, .nav-tabs.nav-stacked > li.active > a:hover {
+    border: none;
+    color: #616467;
+}
+.nav-tabs.nav-stacked > li.active > a {
+    fill: #fff;
+}
+.nav-inverse.nav-stacked > li:hover > a {
+    color: #919496;
+}
+.nav-inverse.nav-tabs.nav-justified > li:hover > a, .nav-inverse.nav-tabs > li:hover > a {
+    color: #919496;
+}
+.nav-tabs.nav-justified > li.active > a, .nav-tabs.nav-justified > li.active > a:active, .nav-tabs.nav-justified > li.active > a:focus, .nav-tabs.nav-justified > li.active > a:hover, .nav-tabs > li.active > a, .nav-tabs > li.active > a:active, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+    color: #616467;
+}
+.nav-inverse > li.active > a:active, .nav-inverse > li.active > a:focus, .nav-inverse > li.active > a:hover, .nav > li.active > a:active, .nav > li.active > a:focus, .nav > li.active > a:hover {
+    outline: 0;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #c1c3c6;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+.nav-tabs.nav-stacked > li > a {
+    position: relative;
+    padding-left: 75px;
+}
+.nav-tabs.nav-stacked > li > a {
+    fill: #c1c3c6;
+    padding: 15px 15px 15px 30px;
+        padding-left: 30px;
+}
+
+.nav-tabs > li:hover > a {
+    color: #c1c3c6;
+}
+.nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a:active, .nav-tabs.nav-justified > li > a:focus, .nav-tabs.nav-justified > li > a:hover, .nav-tabs > li > a, .nav-tabs > li > a:active, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
+    border: none;
+}
+.nav-tabs > li > a:hover {
+    border-color: transparent transparent transparent;
+}
+.nav-inverse > li > a:focus, .nav-inverse > li > a:hover, .nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+.nav-inverse a:hover {
+    color: #919496;
+}
+.nav a:active, .nav-inverse a:active {
+    outline: 0;
+}
+.nav a:hover, .nav-inverse a:hover {
+    color: #616467;
+}
+.nav-pills > li > a, .nav-tabs > li > a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav-tabs > li > a {
+    border: none;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 0;
+}
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.nav-inverse > li > a, .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.nav-tabs.nav-stacked svg {
+    width: 1.3em;
+    height: 1.3em;
+    top: 15px;
+    left: 30px;
+	margin: 0 10px;
+}
+.btn-group-inverse svg, .nav-tabs.nav-stacked svg {
+    float: left;
+}
+.nav-tabs.nav-stacked > li.active > a {
+    fill: #fff;
+}
+.nav-inverse.nav-stacked > li:hover > a {
+    color: #919496;
+}
+.nav-inverse.nav-tabs.nav-justified > li:hover > a, .nav-inverse.nav-tabs > li:hover > a {
+    color: #919496;
+}
+.nav-tabs.nav-justified > li.active > a, .nav-tabs.nav-justified > li.active > a:active, .nav-tabs.nav-justified > li.active > a:focus, .nav-tabs.nav-justified > li.active > a:hover, .nav-tabs > li.active > a, .nav-tabs > li.active > a:active, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+    color: #616467;
+}
+.nav-inverse > li.active > a:active, .nav-inverse > li.active > a:focus, .nav-inverse > li.active > a:hover, .nav > li.active > a:active, .nav > li.active > a:focus, .nav > li.active > a:hover {
+    outline: 0;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #c1c3c6;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+.nav-tabs.nav-stacked > li > a {
+    position: relative;
+    padding-left: 75px;
+}
+.nav-tabs.nav-stacked > li > a {
+    fill: #c1c3c6;
+    padding: 15px 15px 15px 30px;
+        padding-left: 30px;
+}
+.nav-inverse.nav-stacked > li > a {
+    color: #919496;
+}
+.nav-tabs.nav-stacked > li > a {
+    border: none;
+    border-radius: 0;
+    letter-spacing: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-transform: none;
+}
+.nav-tabs > li:hover > a {
+    color: #c1c3c6;
+}
+.nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a:active, .nav-tabs.nav-justified > li > a:focus, .nav-tabs.nav-justified > li > a:hover, .nav-tabs > li > a, .nav-tabs > li > a:active, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
+    border: none;
+}
+.nav-tabs > li > a:hover {
+    border-color: transparent transparent transparent;
+}
+.nav-inverse > li > a:focus, .nav-inverse > li > a:hover, .nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+.nav-inverse a:hover {
+    color: #919496;
+}
+.nav a:active, .nav-inverse a:active {
+    outline: 0;
+}
+.nav a:hover, .nav-inverse a:hover {
+    color: #616467;
+}
+.nav-pills > li > a, .nav-tabs > li > a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav-tabs > li > a {
+    border: none;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 0;
+}
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.nav-inverse > li > a, .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.nav-inverse a {
+    color: #919496;
+}
+
+.nav-inverse.nav-stacked > li {
+    border-bottom-color: rgba(0,0,0,.2);
+    border-top-color: rgba(255,255,255,.05);
+}
+li {
+    width: 100%;
+}
+
+body {
+	 color: #fff;
+	 background-color:#1B273B;
+}
+
+
+.btn-azul {
+    color: #fff;
+    background-color: #337ab7;
+	margin-bottom: 70px;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1;
+	border-radius: 500px;
+	padding: 18px 48px 16px;
+	border-width: 0;
+	letter-spacing: 2px;
+	min-width: 160px;
+	text-transform: uppercase;
+	white-space: normal;
+	font-weight: bold;
+	border: none !important;
+}
+
+.btn-azul:hover, .btn-azul:focus{
+color: white;
+background-color: #13aac5;
+}
+.perfil {
+	text-align: center;
+}
+
+.margen {
+	margin-top: 5%;
+}
+.form-group {
+	width: 50%;
+	float: left;
+}
+
+html, body{
+	height: 100%;
+}
+.md-usuario{
+    width: 50%;
+    margin: 0 auto;
+}
+@media (max-width: 572px) {
+  #input-modificar {
+   width: 100%;
+  }
+}
+
+.menu1xs ul {
+    width: 100%;
+    text-align: center;
+	z-index: 10000;
+}
+
+.menu1xs button {
+    width: 100%;
+    text-align: center;
+	color: black !important;
+}
+ i {
+	margin: 0 5px;
+}

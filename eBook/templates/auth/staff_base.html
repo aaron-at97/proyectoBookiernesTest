@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"  />
+
+    {% include "auth/header.html" %}
+
+</head>
+
+<body>
+<span vocab="https://schema.org/">
+
+<div id="content">
+    {% block contents %}{% endblock %}
+</div>
+
+<div id="footer">
+    {% block footer %}{% endblock %}
+</div>
+
+</span>
+</body>
+</html>

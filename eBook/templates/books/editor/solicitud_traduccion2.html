@@ -1,0 +1,70 @@
+{% extends 'navbars/navbar_base.html' %}
+{% block navbar %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+
+{% block content %}
+
+    <script>
+        $(document).ready(function () {
+            alert("Book translated correctly: \n {{ data }}")
+        });
+    </script>
+
+    <h1> Libros por traducir </h1>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td style="font-weight: bold"> Title book</td>
+            <td style="font-weight: bold"> Author name </td>
+            <td style="font-weight: bold">Gender</td>
+            <td style="font-weight: bold"> Date uploaded </td>
+            <td style="font-weight: bold"> State</td>
+            <td style="font-weight: bold">Translate</td>
+        </tr>
+        <tr>
+
+            <td>Cañas y barro</td>
+            <td> Mark Lawrence </td>
+            <td>Novela</td>
+            <td>07/05/2022</td>
+            <td> Por traducir </td>
+            <td>
+                <a href="{% url 'traduccionPopUp' %}" class="btn btn-primary fa fa-pencil"></a>
+            </td>
+        </tr>
+        <tr>
+
+            <td> El futuro de nuestra mente</td>
+            <td> Ken Follet </td>
+            <td>Investigación científica</td>
+            <td> 07/05/2022</td>
+            <td> Por traducir </td>
+            <td>
+                <a href="{% url 'traduccionPopUp' %}" class="btn btn-primary fa fa-pencil"></a>
+            </td>
+        </tr>
+        <tr>
+
+            <td> Juego de tronos</td>
+            <td> George R.R Martin </td>
+            <td>Novela</td>
+            <td> 07/05/2022</td>
+            <td> Por asignar</td>
+            <td>
+                <a href="{% url 'traduccionPopUp' %}" class="btn btn-primary fa fa-pencil"></a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <input style="display: none" type="submit" id="valmenu" value="solTrad"/>
+
+
+{% endblock %}
+{% block popUp %}
+{% endblock %}

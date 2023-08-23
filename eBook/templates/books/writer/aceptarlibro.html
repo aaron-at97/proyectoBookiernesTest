@@ -1,0 +1,34 @@
+{% extends 'books/writer/create_book.html' %}
+
+{% block popUp %}
+
+    <div class="ventana">
+        <div class="contenido-ventana" style="width: 71rem;">
+            <span class="boton-cerrar"></span>
+            <h1 style="font-size: 36px;">Are you sure you want to upload the book?</h1>
+            <div class="center">
+                {% for element in writer %}
+                <form role="form" action="{% url 'book_createSave' element.staff_id %}" method="POST">
+                    {% csrf_token %}
+                    <select name="books" required="" id="id_books" multiple="" style="visibility: hidden">
+                        {% for element2 in element.books.all %}
+                          <option value="{{ element2.id }}" selected></option>
+                        {% endfor %}
+                        {% for element3 in book %}
+                          <option value="{{ element3.id }}" selected></option>
+                        {% endfor %}
+                    </select>
+                    <input class="btn-default-bookiernes" type="submit" value="To Acept">
+                    <a href="{% url 'book_create' %}" class="btn-default-bookiernes">Cancel </a>
+                </form>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+

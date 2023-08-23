@@ -1,0 +1,112 @@
+{% load static %}
+{% block contents %}
+    <!-- Libros mas leidos inicio -->
+    <div class="container">
+        <div class="row center" style="margin-top: 15%;">
+            <h2 class="h1">Looking for new books?</h2>
+            <p class="lead">Enter our library to discover new books.</p>
+        </div>
+        <div class="row">
+            <div class="album-results container">
+                <ul>
+                    {% for element2 in book %}
+                        <li typeof="Book" class='col-xs-12 col-sm-3 js-album-results-1'>
+                            <figure>
+                                <div class='box'>
+                                    <div class='content'>
+                                        <img property="image" class='img-responsive'
+                                             src='{% static '/img/Libros/' %}{{ element2 }}/0.jpg'>
+                                    </div>
+                                </div>
+
+                                <div class='content-overlay'></div>
+                                <div class='content-details'>
+                                    <form action='#' method='post'>
+                                        <figcaption class='album-play-button'>
+                                            <h2 property="name" content='{{ element2 }}' class='text-white'
+                                                id="title"><input type='hidden' name='libro'
+                                                                  value='{{ element2 }}'>{{ element2 }}
+                                            </h2></input>
+                                            <h4 class='text-white'>{{ element2.autor }}<input type='hidden' name='autor'
+                                                                                              value=''>{{ element2.autor }}
+                                            </h4></input>
+                                            <div id='segmented-play-now' class='btn btn-link'>
+                                                <a href="{% url 'libroSinSession' element2 %}" class='azul-claro'
+                                                   value='LEER YA'> READ NOW</a>
+                                            </div>
+                                        </figcaption>
+                                    </form>
+
+                                </div>
+                            </figure>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- apartado que hay en BookView -->
+    <div class="hero hero-whats-on general">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-md-5 margen">
+                    <h2>
+                        What's in BookView?
+                    </h2>
+                    <div>
+                        <h3>
+                            Books
+                        </h3>
+                        <p>
+                            In BookView you have millions of Books. Read your favourites, discover new ones books and
+                            mounts
+                            you perfect collection.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            Library
+                        </h3>
+                        <p>
+                            You will find your library compiled with the books that you liked the most.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            New releases
+                        </h3>
+                        <p>
+                            Read this week's latest books and take a look at what's most successful in the Top 50.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-1 col-md-6">
+                    <div class="albums clearfix">
+                        {% for element2 in book %}
+                            <div  typeof="Book" id="album-slot">
+                                <div class="album-art has-preview album-paused">
+                                    <img property="image" src='{% static '/img/Libros/' %}{{ element2 }}/0.jpg'
+                                         class="lazy lazy-no-small"
+                                         style="display: block;">
+                                    <div class="register-state">
+                                        <p>Regístrate para leer el libro completo</p>
+                                        <a class="btn btn-link" href="/es/signup/">COMENZAR</a>
+                                    </div>
+                                    <div class="play-state content-overlay">
+                                        <div class="svg-holder">
+                                            <a href="{% url 'libroSinSession' element2 %}"><img
+                                                    src="{% static 'img/LEER MAS.png' %}"
+                                                    class="lazy lazy-no-small" style="display: block;"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

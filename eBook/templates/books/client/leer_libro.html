@@ -1,0 +1,50 @@
+{% extends 'navbars/navbar_base.html' %}
+{% load static %}
+
+{% block navbar %}
+    {% include "navbars/navbar_Client.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Client.html" %}
+{% endblock %}
+
+{% block content %}
+    <style>
+        .justificar {
+            width: 100%;
+            margin: 0 auto;
+            text-align: justify;
+            background-color: white;
+            color: black !important;
+            font-family: Palatino Linotype;
+            font-weight: 100;
+        }
+
+        .justificar p {
+            margin: 0 25%;
+            font-size: 17px;
+            line-height: 1.59;
+            padding: 20px 0;
+        }
+
+    </style>
+    <div class="center">
+        <div class=justificar>
+            <p class="text">{{ data }}<br/></p>
+        </div>
+        <a href="{% url 'leer_libro' libro siguiente %}">
+            <button class='btn btn-primary' name='aceptar'> Siguiente</button>
+        </a>
+        <p id="number"> Pag: {{ pagina }}  </p>
+        {% if siguiente != 2 %}
+            <a href="{% url 'leer_libro' libro anterior %}">
+                <button class='btn btn-primary' name='aceptar'> Anterior</button>
+            </a>
+        {% endif %}
+        {% if siguiente == 2 %}
+            <a class='btn btn-primary' name='aceptar'> Anterior </a>
+        {% endif %}
+    </div>
+
+{% endblock %}

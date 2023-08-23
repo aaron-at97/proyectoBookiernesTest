@@ -1,0 +1,80 @@
+{% extends 'navbars/navbar_base.html' %}
+{% block navbar %}
+    {% include "navbars/navbar_Client.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Client.html" %}
+{% endblock %}
+
+{% block content %}
+    <!--<div class="page-header">
+        <h1>Editar perfil</h1>
+    </div>-->
+    <div class="row">
+        <div class="col-md-12">
+            <div typeof="Person" class="perfil">
+                {% for element in object_list %}
+                <form role="form" action="{% url 'editar_perfilSave' element.staff_id %}" method="POST">
+
+                    {% csrf_token %}
+                    <div class='form-group' id="input-modificar">
+                        <label class='control-label'> Name WebService: </label>
+                        <input type='text' class='form-control md-usuario' id='name' name='name'
+                                value="{{ element.name }}" maxlength="30">
+                    </div>
+                    <div class='form-group' id="input-modificar">
+                        <label class='control-label'> Name: </label>
+                        <input property="name" type='text' class='form-control md-usuario' id='nombre' name='nombre'
+                                value="{{ element.nombre }}" maxlength="30">
+                    </div>
+
+                    <div class="form-group" id="input-modificar">
+                        <label class="control-label">Surname</label>
+                        <input property="familyName" type='text' class='form-control md-usuario' id='apellido' name='apellido'
+                               value="{{ element.apellido }}" maxlength="30">
+                    </div>
+                    <div class="form-group" id="input-modificar">
+                        <label class="control-label">Phone</label>
+                        <input property="telephone" type='number' class='form-control md-usuario' id='telefon' name='telefon'
+                                value="{{ element.telefon }}" maxlength="11">
+                    </div>
+                    <div class="form-group" id="input-modificar">
+                        <label class="control-label">Email</label>
+                        <input property="email" type='text' class='form-control md-usuario' id='correo' name='correo'
+                               value="{{ element.correo }}" maxlength="80">
+                    </div>
+                    <div class="form-group" id="input-modificar">
+                        <label class="control-label">Direction</label>
+                        <input property="address" type='text' class='form-control md-usuario' id='direccion' name='direccion'
+                               value="{{ element.direccion }}" maxlength="50">
+                    </div>
+                    <div class="form-group" id="input-modificar">
+                        <label class="control-label">Postal Code</label>
+                        <input property="address" type='number' class='form-control md-usuario' id='codi_postal' name='codi_postal' value="{{ element.codi_postal }}"
+                               maxlength="5">
+                    </div>
+                {% endfor %}
+
+                <div>
+                    <h3 class="margen" id="margen" style="clear: both">Edit your profile
+</h3>
+                    <div class="row margen">
+                        <div class="col-md-6">
+                            <p>Modify your profile whenever you want if you see any incorrect data in your BookView personal profile</p>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="Modificar" class="btn btn-azul" type="submit" value="Modify">
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <input style="display: none" type="submit" id="valmenu" value="book4"/>
+{% endblock %}
+
+{% block popUp %}
+{% endblock %}

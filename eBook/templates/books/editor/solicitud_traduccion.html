@@ -1,0 +1,62 @@
+{% extends 'navbars/navbar_base.html' %}
+{% block navbar %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+
+{% block content %}
+    <h1> Books to translate  </h1>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td style="font-weight: bold"> Title book</td>
+            <td style="font-weight: bold"> Author name </td>
+            <td style="font-weight: bold">Gender</td>
+            <td style="font-weight: bold"> Date uploaded </td>
+            <td style="font-weight: bold"> State </td>
+            <td style="font-weight: bold"> Traducir </td>
+        </tr>
+        <tr>
+
+            <td>Cañas y barro</td>
+            <td> Mark Lawrence </td>
+            <td>Novela</td>
+            <td>07/05/2022</td>
+            <td>To translate</td>
+            <td>
+                <a href="{% url 'traduccionPopUp' %}" class="btn btn-primary fa fa-pencil"></a>
+            </td>
+        </tr>
+        <tr>
+
+            <td> El futuro de nuestra mente</td>
+            <td> Ken Follet </td>
+            <td>Investigación científica</td>
+            <td> 07/05/2022</td>
+            <td>To translate</td>
+            <td>
+                <a href="{% url 'traduccionPopUp' %}" class="btn btn-primary fa fa-pencil"></a>
+            </td>
+        </tr>
+        <tr>
+
+            <td> Juego de tronos</td>
+            <td> George R.R Martin </td>
+            <td>Novela</td>
+            <td> 07/05/2022</td>
+            <td>To translate</td>
+            <td>
+                <a href="{% url 'traduccionPopUp' %}" class="btn btn-primary fa fa-pencil"></a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <input style="display: none" type="submit" id="valmenu" value="solTrad"/>
+
+{% endblock %}
+{% block popUp %}
+{% endblock %}

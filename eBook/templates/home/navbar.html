@@ -1,0 +1,29 @@
+{% load static %}
+{% block navbar %}
+    <!-- MENU -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle margen-menu" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{% url 'home' %}" class="navbar-brand margen-color bookView-logo" href="#"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+
+
+                    <li class="actived">
+                        <a href="{% url 'home' %}" class="margen-color">Start</a>
+                    </li>
+                    <li role="separator" class="divider hidden-xs"></li>
+                    
+                    <li><a class="margen-color" href="{% url 'login' %}"><span
+                            class="glyphicon glyphicon-log-in"></span> Log In </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}

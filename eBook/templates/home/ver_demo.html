@@ -1,0 +1,78 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login_libroSinSession.css' %}"/>
+{% block navbar %}
+    {% include "home/navbar.html" %}
+{% endblock %}
+<body id="static_context" class="login context_landing">
+<span vocab="https://schema.org/">
+
+<head>
+    {% include "home/header.html" %}
+</head>
+<div typeof="Book" class="main-login-class">
+    <h1>Inicia sesión para leer el libro</h1>
+    <div class="cols-wrap">
+        <script type="text/javascript">
+            $(document).ready(function () {
+                link = document.getElementById("link").value;
+                $("<style> .context_landing::before {  background: url('" + link + "') no-repeat center center fixed; background-size: cover;} </style>").appendTo("head");
+            });
+
+        </script>
+        <style>
+            .context_landing .col-left {
+                width: 26%;
+            }
+
+            .context_landing .main-login-class {
+                margin: 0 auto;
+                padding: 0 20px;
+                max-width: 1600px;
+            }
+
+            .justificar {
+                width: 90%;
+                margin: 0 auto;
+                text-align: justify;
+                background-color: white;
+                color: black;
+                font-family: Palatino Linotype;
+                font-weight: 100;
+            }
+
+            .justificar p {
+                margin: 0 17%;
+            }
+
+
+        </style>
+
+        <div class='col col-left'>
+            <img property="image" id='cover-img' src='{% static '/img/Libros/' %}{{ libro }}/0.jpg' alt='f'>
+            <p property="name" class='primary-title'>{{ libro }}</p>
+            <p property="author" class='secondary-title' style="display: none">Author: </p>
+            <p property="bookEdition" class='secondary-title' style="display: none">BookView </p>
+            <p property="genre" class='secondary-title' style="display: none">Novela</p>
+        </div>
+        <input type='text' name='link' id='link' value='{% static '/img/Libros/' %}{{ libro }}/0.jpg'
+               style='display: none;'>
+        <div class="col col-right">
+            <div class="container-fluid">
+
+                <div class="album-results">
+                    <div class="row center" id="poner">
+                        <div class=justificar>
+                            <p property="description" class="text" style="color: black; padding: 4% 0; font-size: 18px;">{{ data }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</span>
+
+</body>
+
+</html>

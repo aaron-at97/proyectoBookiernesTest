@@ -1,0 +1,17 @@
+{% extends 'books/client/editarPerfil.html' %}
+
+{% block popUp %}
+
+    <div class="ventana">
+        <div class="contenido-ventana alert alert-success center" role="alert">
+            <span class="boton-cerrar"></span>
+            <h1>Profile updated successfully</h1>
+            <div>
+                <a href="{% url 'editar_perfil' %}" class="btn-default-bookview-green">Aceptar</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

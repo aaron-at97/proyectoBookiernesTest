@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.head .bookView-logo {
+    background-image: url("../img/logo.PNG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    max-width: 100%;
+	width: 250px;
+	height: 75px;
+}
+
+.btn-stroked-dark {
+    color: #fff;
+    box-shadow: 0 0 0 2px #fff inset;
+    background-color: transparent;
+    margin-bottom: 70px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    padding: 18px 48px 16px;
+    border-width: 0;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: bold;
+}
+
+.btn-stroked-dark:hover, .btn-stroked-dark:focus {
+    color: white;
+    background-color: #337ab7;
+    box-shadow: 0 0 0 2px #fff inset;
+}
+body, .header-formulario-registro-logo {
+	background-color:#1B273B !important;
+	padding-bottom: 5px;
+	font-weight: 400;
+	font-family: Circular,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222326;
+
+}
+
+.head {
+    border-bottom: 1px solid #d9dadc;
+    padding: 25px 0 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.row {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.row-submit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-control{
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9dadc;
+    border-radius: 0;
+
+}
+
+
+
+
+
+
+
+

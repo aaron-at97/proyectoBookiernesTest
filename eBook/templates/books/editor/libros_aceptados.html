@@ -1,0 +1,44 @@
+{% extends 'navbars/navbar_base.html' %}
+{% block navbar %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Editor.html" %}
+{% endblock %}
+{% block content %}
+    <h1> Accepted books </h1>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td style="font-weight: bold">Download book</td>
+            <td style="font-weight: bold"> Title book</td>
+            <td style="font-weight: bold"> Author name </td>
+            <td style="font-weight: bold">Gender</td>
+            <td style="font-weight: bold"> Date uploaded </td>
+            <td style="font-weight: bold"> State </td>
+            <td style="font-weight: bold">Asign</td>
+        </tr>
+        {% for element in object_list %}
+            {% for element2 in element.books.all %}
+                {% if element2.state == 1 %}
+                    <tr>
+                        <td>
+                            <button class="btn btn-primary fa fa-download" name="aceptar" onclick=""> Download</button>
+                        </td>
+                        <td>{{ element2 }}</td>
+                        <td>{{ element.name }}</td>
+                        <td>{{ element2.genere }}</td>
+                        <td>{{ element2.date | date:"d/m/Y" }}</td>
+                        <td><p style="color: green">Acept</p></td>
+                        <td>
+                            <a href="{% url 'rejectBook' element2.id %}" class="btn btn-primary btn-danger fa fa-remove" name="aceptar"></a>
+                        </td>
+                    </tr>
+                    {% endif %}
+            {% endfor %}
+        {% endfor %}
+        </tbody>
+    </table>
+    <input style="display: none" type="submit" id="valmenu" value="bookacept"/>
+{% endblock %}

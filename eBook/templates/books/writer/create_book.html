@@ -1,0 +1,68 @@
+{% extends 'navbars/navbar_base.html' %}
+{% block navbar %}
+    {% include "navbars/navbar_Writer.html" %}
+{% endblock %}
+
+{% block navbarXS %}
+    {% include "navbars/navbar_Writer.html" %}
+{% endblock %}
+
+{% block content %}
+    <script>
+        $(document).on('change', '.btn-file :file', function () {
+            var input = $(this);
+            var numFiles = input.get(0).files ? input.get(0).files.length : 1;
+            var label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.trigger('fileselect', [numFiles, label]);
+        });
+        $(document).ready(function () {
+            $('.btn-file :file').on('fileselect', function (event, numFiles, label) {
+                var input = $(this).parents('.input-group').find(':text');
+                var log = numFiles > 1 ? numFiles + ' files selected' : label;
+                if (input.length) {
+                    input.val(log);
+                } else {
+                    if (log) alert(log);
+                }
+            });
+        });
+    </script>
+
+    <div class="formulario-registro">
+        <div class="container">
+            <div class="contenido-formulario">
+                <h2 style="color: white"> Register Book </h2>
+                <form id="formulari" action="{% url 'book_createWriter' %}" method="post">
+                    {% csrf_token %}
+                    {% if mensaje == "OK" %}
+                        <div class="alert alert-success" role="alert">
+                            Review Registrada correctamente
+                        </div>
+                    {% endif %}
+
+                    {{ form.as_ul }}
+                    <div class="input-group" style="clear: both; float: left; width: 50%; margin: 1% 25%;">
+                        <label class="input-group-btn">
+                                <span class="btn btn-default btn-file fa fa-folder-open-o">
+                                    <a style="font-family:Helvetica Neue,Helvetica,Arial,sans-serif; text-decoration: none; color: #444;">
+                                        Seleccionar archivos
+                                    </a>
+                                    <input accept=".zip" class="hidden" name="banner" type="file"
+                                           id="banner">
+                                </span>
+                        </label>
+                        <input class="form-control" id="banner_captura" readonly="readonly"
+                               name="banner_captura" type="text" value="">
+                    </div>
+                    <input class="btn btn-stroked-dark" type="submit" value="submit">
+                </form>
+
+            </div>
+        </div>
+        <input style="display: none" id="valmenu" value="updateBook"/>
+    </div>
+
+{% endblock %}
+
+{% block popUp %}
+{% endblock %}

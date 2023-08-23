@@ -1,0 +1,75 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/login_libroSinSession.css' %}"/>
+
+<body id="static_context" class="login context_landing">
+<head>
+
+    {% include "home/header.html" %}
+
+</head>
+<span vocab="https://schema.org/">
+
+<div typeof="Book" class="main-login-class">
+        <h1>Login to read the book</h1>
+  	<div class="cols-wrap">
+        <script type="text/javascript">
+        $(document).ready(function () {
+            link = document.getElementById("link").value;
+            $("<style> .context_landing::before {  background: url('" + link + "') no-repeat center center fixed; background-size: cover;} </style>").appendTo("head");
+        });
+
+        </script>
+		<div class='col col-left'>
+          	<img property="image" id='cover-img' src='{% static '/img/Libros/' %}{{ libro }}/0.jpg' alt='f'>
+                <p property="name" class='primary-title'>{{ libro }}</p>
+                <p property="author" class='secondary-title' style="display: none">Author: </p>
+                <p property="bookEdition" class='secondary-title' style="display: none">BookView </p>
+                <p property="genre" class='secondary-title' style="display: none">Novela</p>
+		</div>
+		  <input type='text' name='link' id='link' value='{% static '/img/Libros/' %}{{ libro }}/0.jpg'
+                 style='display: none;'>
+        <div class="col col-right">
+             <div id="login-pane">
+             	<div id="login">
+              		<div id="login-method">
+                       <div class="step show" id="screen-signup-flow">
+                       		<div class="step-outer">
+                       			<div class="step-inner">
+                       				<a href=""> <button id="signup-bookIerner" class="btn-landing btn-azul" data-or="or"
+                                                        data-contextual="true">Sign up - Developing<br>
+									</button> </a>
+                       				<div class="separator-container">
+										<div class="separator-line"></div>
+										<div class="separator-text">Do you already have an account?</div>
+										<div class="separator-line"></div>
+                       				</div>
+                       				<a href="{% url 'login' %}"> <button id="has-account" class="btn-landing btn-white"
+                                                                         data-or="or">Log In
+        							</button> </a>
+                                    <a href="{% url 'verDemo' libro %}"> <button id="has-account"
+                                                                                 class="btn-landing btn-white"
+                                                                                 data-or="or">View demo
+        							</button> </a>
+                                    <div class="separator-container">
+                                        <div class="separator-line"></div>
+                                        <div class="separator-text">Do you want to go back?</div>
+                                        <div class="separator-line"></div>
+                                    </div>
+                                    <a href="{% url 'home' %}"> <button id="signup-bookIerner"
+                                                                        class="btn-landing btn-azul" data-or="or"
+                                                                        data-contextual="true">Return<br>
+                                    </button> </a>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</div>
+</span>
+</body>
+
+</html>

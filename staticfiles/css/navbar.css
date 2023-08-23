@@ -1,0 +1,60 @@
+body {
+    font-family: Circular,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #1B273B;
+    font-weight: bold;
+}
+
+.navbar-header .bookView-logo {
+    background-image: url("../img/logoN.PNG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    max-width: 100%;
+    width: 200px;
+    height: 50px;
+}
+.arreglo {
+    position:  fixed;
+    height:  100%;
+}
+.navbar-logo {
+margin-top: 20px;
+margin-bottom: 20px;
+width: 132px;
+height: 40px;
+background-size: 132px 40px;
+}
+
+nav {
+	background: black !important;
+}
+
+.margen-color:hover {
+    color: #2d46b9 !important;
+}
+
+.navbar {
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.divider {
+    background-color: #fff !important;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    height: 16px;
+    width: 1px;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.margen-color {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    color: #fff !important;
+}

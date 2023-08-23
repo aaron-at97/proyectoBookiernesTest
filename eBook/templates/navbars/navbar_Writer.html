@@ -1,0 +1,23 @@
+<script>
+    $(document).ready(function () {
+        var value = $("#valmenu").val();
+        // Checking for blank fields.
+        if (value == 'updateBook') {
+            $('.updateBook').addClass('active');
+        } else if (value == 'myBooks') {
+            $('.myBooks').addClass('active');
+        }
+    });
+</script>
+
+<li id="myBooks" class="myBooks">
+    <a href="{% url 'list_book' %}"><i class="fa fa-book" aria-hidden="true"></i> My Books Upload </a>
+</li>
+
+<li id="updateBook" class="updateBook">
+    <a href="{% url 'book_create' %}"><i class="fa fa-upload" aria-hidden="true"></i> Upload books </a>
+</li>
+
+<li id="salir">
+    <a href="{% url 'login' %}"><i class="fa fa-undo" aria-hidden="true"></i> Exit </a>
+</li>

@@ -1,0 +1,28 @@
+<script>
+    $(document).ready(function () {
+        var value = $("#valmenu").val();
+        // Checking for blank fields.
+        if (value === 'book1') {
+            $('.book1').addClass('active');
+        }
+        else if (value === 'book2') {
+            $('.book2').addClass('active');
+        }
+        else if (value === 'book4') {
+            $('.book4').addClass('active');
+        }
+    });
+</script>
+
+<li class="book1" id="submenu-item-account-overview">
+    <a href="{% url 'general' %}"><i class="fa fa-home" aria-hidden="true"></i> General </a>
+</li>
+<li class="book2" class="biblioteca">
+    <a href="{% url 'biblioteca' %}"><i class="fa fa-book" aria-hidden="true"></i> Library </a>
+</li>
+<li class="book4" id="submenu-item-family-plan">
+    <a href="{% url 'editar_perfil' %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit profile </a>
+</li>
+<li id="salir">
+    <a href="{% url 'login' %}"><i class="fa fa fa-undo" aria-hidden="true"></i> Exit </a>
+</li>
